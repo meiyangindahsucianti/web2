@@ -8,4 +8,5 @@
 	header('Location: '.$uri.'/dashboard/');
 	exit;
 ?>
+ini pertambahan
 Something is wrong with the XAMPP installation :-(
