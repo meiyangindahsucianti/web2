@@ -14,34 +14,64 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-	<header>
-		<h1>Operasi CRUD</h1>
-	</header>
-	<nav>
-		<ul>
-			<li>Menu</li>
-			<li><a href="#">menu 1</a></li>
-			<li><a href="#">menu 1</a></li>
-			<li><a href="#">menu 1</a></li>
-		</ul>
-	</nav>
+<body style="background-color: #eeeeee">
 
-	<article>
-		<table  border="1" width="75%" align="center">
-			<tr>
-				<th>
-					<a href="tambah.php"><button type="submit">tambah</button></a>
-				</th>
-			</tr>
-		</table>
-	</article>
+<!--  bagian header  spasi -->
+<div class="container">
+	<div class="col-md-12"><br>
+	</div>
+</div>
 
-	<!-- AKHIR CONTENT - dari sini kebawah jgn dihapus -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-1.12.0.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+<!--  bagian header Judul web   -->
+<div class="container" style="background-color: #69f0ae">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+			<br><br>
+				<h1>
+					<b>Web</b>   <small style="font-size:25px"> - membuat aplikasi crud</small>  
+				</h1>
+			</div>
+			<br>
+		</div>
+	</div>
+</div>
+
+<!--  bagian Header menuu   -->
+<div class="container " style="background-color: #000000">
+	<div class="row" style="font-size: 20px">
+		<div class="col-md-12">
+				<ul class="nav navbar-default" style="color: #1a237e">
+					<li class="active" style="background-color: #b9f6ca">
+						<a href="index.php">&nbsp;Beranda&nbsp;</a>
+					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<li>
+						<a href="tambah.php">&nbsp;Tambah Data&nbsp;</a>
+					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<li class="disabled">
+						<a href="#">&nbsp;menu 2&nbsp;</a>
+					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<li class="disabled">
+						<a href="#">&nbsp;menu 3&nbsp;</a>
+					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</ul>
+		</div>
+	</div>
+</div>
+
+<!--  bagian button   -->
+<div class="container" style="background-color: #b9f6ca">
+	<div class="row" style="height: 486px">
+		<div class="col-md-12">
+			<br><br><br><br>
+			<a href="tambah.php"><button type="button" class="btn btn-info">
+				Tambah Data
+			</button></a>
+		</div>
+	</div>
+</div>
+
 </body>
-
+	<link rel="javascript" src="js/jquery.js">
+	<link rel="javascript" src="js/jquery.min.js">
 </html>
