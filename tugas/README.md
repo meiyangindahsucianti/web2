@@ -6,7 +6,7 @@
 [Materialize](http://materializecss.com/), a CSS Framework based on material design
 
 ### Current Version : v0.97.8
-
+...
 ## Sass Requirements:
 - Ruby Sass 3.3+, LibSass 0.6+
 
