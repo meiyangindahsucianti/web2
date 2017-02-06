@@ -86,29 +86,30 @@ include 'koneksi.php';
 		<div class="col-md-12">
 			<br><br><br><br>
 			  <h2>Data siswa</h2>        
-			  <table class="table table-bordered">
-			    <thead style="text-align: center;">
-					<?php 
+			  <table class="table table-bordered" >
+			    <thead>
+			      <tr>
+			        <th><center>No.</center></th>
+			        <th><center>Nama</center></th>
+			        <th><center>NIM</center></th>
+			        <th><center>Alamat</center></th>
+			        <th colspan="2"><center>Aksi</center></th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    <?php 
 						$sql_query= "SELECT * FROM siswa";
 						$result_set= mysql_query($sql_query);
 
 						if (mysql_num_rows($result_set)>0) {
 							while ($row=mysql_fetch_row($result_set)) {
 					?>
-			      <tr>
-			        <th>no</th>
-			        <th>nama</th>
-			        <th>nim</th>
-			        <th>alamat</th>
-			        <th>Aksi</th>
-			      </tr>
-			    </thead>
-			    <tbody>
 			    <tr>
+			    	<td><?php echo $row [0];?></td>
 			    	<td><?php echo $row [1];?></td>
 			    	<td><?php echo $row [2];?></td>
 			    	<td><?php echo $row [3];?></td>
-			    	<td><?php echo $row [4];?></td>
+			    	
 			    	<td><a href="javascript:edit_id('<?php echo $row[0];?>')">edit</a></td>
 			    	<td><a href="javascript:delete_id('<?php echo $row[0];?>')">delete</a></td>
 			    </tr>
