@@ -1,9 +1,10 @@
 <?php
 include 'koneksi.php';
 	if(isset($_GET['delete_id']))
-		$sql_query ="DELETE FROM mahasiswa WHERE no=".$_GET['delete_id'];
+		$sql_query ="DELETE FROM siswa WHERE no=".$_GET['delete_id'];
 		mysql_query($sql_query);
 		header("location : $_SERVER [PHP_SELF]");
+
 ?>
 
 <!DOCTYPE html>
@@ -79,24 +80,21 @@ include 'koneksi.php';
 	</div>
 </div>
 
-
-<?php 
-	$sql_query= "SELECT * FROM mahasiswa";
-	$result_set= mysql_query($sql_query);
-
-	if (mysql_num_rows($result_set)>0) {
-		while ($row=mysql_fetch_row($result_set)) {
-?>
-
 <!--  bagian button   -->
 <div class="container" style="background-color: #b9f6ca">
 	<div class="row" style="height: 486px">
 		<div class="col-md-12">
 			<br><br><br><br>
-			
 			  <h2>Data siswa</h2>        
 			  <table class="table table-bordered">
 			    <thead style="text-align: center;">
+					<?php 
+						$sql_query= "SELECT * FROM siswa";
+						$result_set= mysql_query($sql_query);
+
+						if (mysql_num_rows($result_set)>0) {
+							while ($row=mysql_fetch_row($result_set)) {
+					?>
 			      <tr>
 			        <th>no</th>
 			        <th>nama</th>
