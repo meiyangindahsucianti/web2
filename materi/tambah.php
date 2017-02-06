@@ -43,7 +43,7 @@
 		<div class="col-md-12">
 				<ul class="nav navbar-default" style="color: #1a237e">
 					<li>
-						<a href="index.html">&nbsp;Beranda&nbsp;</a>
+						<a href="index.php">&nbsp;Beranda&nbsp;</a>
 					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<li class="active" style="background-color: #b9f6ca">
 						<a href="#">&nbsp;Tambah Data&nbsp;</a>
@@ -88,6 +88,10 @@
 					<label for="alamat">Alamat</label>            
 	    			<textarea class="form-control" style=" width: 200px;" id="alamat" name="textarea"></textarea>
 	    			</div>
+	    			<div class="form-group">
+						<label for="jenis_kelamin">aksi</label>
+						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="jenis_kelamin">
+					</div>
 					<button type="submit" style="color: #000000" class="btn btn-info ">Simpan</button>
 			</form>
 		</div>
