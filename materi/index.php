@@ -1,3 +1,11 @@
+<?php
+include 'koneksi.php';
+	if(isset($_GET['delete_id']))
+		$sql_query ="DELETE FROM mahasiswa WHERE no=".$_GET['delete_id'];
+		mysql_query($sql_query);
+		header("location : $_SERVER [PHP_SELF]");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +20,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript">
+	function edit_id(id){
+		if (confirm('serius ingin di modif bro')){
+			window.location.href ='edit.php?edit_id='+id;
+		}
+	}
+	function delete_id(id){
+		if (confirm('serius ingin di hapus euy')) {
+			window.location.href='index.php?delete_id'+id;
+		}
+	}
+</script>
 </head>
 
 <body style="background-color: #eeeeee">
