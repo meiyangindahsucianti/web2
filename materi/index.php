@@ -67,7 +67,7 @@ include 'koneksi.php';
 						<a href="index.php">&nbsp;Beranda&nbsp;</a>
 					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<li>
-						<a href="tambah.php">&nbsp;Tambah Data&nbsp;</a>
+						<a href="tambah.php">&nbsp;menu 1&nbsp;</a>
 					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<li class="disabled">
 						<a href="#">&nbsp;menu 2&nbsp;</a>
