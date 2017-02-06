@@ -68,37 +68,20 @@
 <div class="container" style="background-color: #b9f6ca">
 	<div class="row" style="height: 486px">
 		<div class="col-md-4">
-			<h4 style="color: #1a237e"><i>Tambah data kamar</i></h4><br>
-			<form>
-					<div class="form-group form-group-default">
-						<tr><td><label for="nomor-kamar">No. Kamar</label></td>
-						<td><input type="text" style="height: 30px; width: 100px;" class="form-control" id="nomor_kamar"></td></tr>
-					</div>
-					<div class="form-group">
-						<label for="nama_pegawai">Type Kamar</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="nama_pegawai">
-					</div>
-					<div class="form-group">
-						<label for="jenis_kelamin">Biaya kamar</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="jenis_kelamin">
-					</div>
-					<button type="submit" style="color: #000000" class="btn btn-info ">Simpan</button>
-			</form>
-
 		</div>
 		<div class="col-md-4">
-			<h4 style="color: #1a237e"><i>Tambah data pegawai</i></h4><br>
+			<h4 style="color: #1a237e"><i>Tambah data Siswa</i></h4><br>
 			<form>
 					<div class="form-group form-group-default">
-						<tr><td><label for="nomor_pegawai">No. Pegawai</label></td>
+						<tr><td><label for="nomor_pegawai">Nomor</label></td>
 						<td><input type="text" style="height: 30px; width: 100px;" class="form-control" id="nomor_pegawai"></td></tr>
 					</div>
 					<div class="form-group">
-						<label for="nama_pegawai">Nama Pegawai</label>
+						<label for="nama_pegawai">Nama</label>
 						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="nama_pegawai">
 					</div>
 					<div class="form-group">
-						<label for="jenis_kelamin">Jenis Kelamin</label>
+						<label for="jenis_kelamin">NIM</label>
 						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="jenis_kelamin">
 					</div>
 					<div class="form-group">
@@ -109,26 +92,6 @@
 			</form>
 		</div>
 		<div class="col-md-4">
-			<h4 style="color: #1a237e"><i>Tambah data pelanggan</i></h4><br>
-			<form>
-					<div class="form-group form-group-default">
-						<tr><td><label for="nomor_pegawai">No. Pelanggan</label></td>
-						<td><input type="text" style="height: 30px; width: 100px;" class="form-control" id="nomor_pegawai"></td></tr>
-					</div>
-					<div class="form-group">
-						<label for="nama_pegawai">Nama Pelanggan</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="nama_pegawai">
-					</div>
-					<div class="form-group">
-						<label for="jenis_kelamin">Umur Pelanggan</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="jenis_kelamin">
-					</div>
-					<div class="form-group">
-					<label for="alamat">Alamat</label>            
-	    			<textarea class="form-control" style=" width: 200px;" id="alamat" name="textarea"></textarea>
-	    			</div>
-					<button type="submit" style="color: #000000" class="btn btn-info ">Simpan</button>
-			</form>
 		</div>
 	</div>
 </div>
