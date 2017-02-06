@@ -110,8 +110,8 @@ include 'koneksi.php';
 			    	<td><?php echo $row [2];?></td>
 			    	<td><?php echo $row [3];?></td>
 			    	
-			    	<td><a href="javascript:edit_id('<?php echo $row[0];?>')">edit</a></td>
-			    	<td><a href="javascript:delete_id('<?php echo $row[0];?>')">delete</a></td>
+			    	<td><center><a href="javascript:edit_id('<?php echo $row[0];?>')">edit</a></td></center>
+			    	<td><center><a href="javascript:delete_id('<?php echo $row[0];?>')">delete</a></td></center>
 			    </tr>
 			    <?php
 			}
