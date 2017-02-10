@@ -1,3 +1,5 @@
+<?php 
+					include "koneksi.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,29 +71,42 @@
 	<div class="row" style="height: 486px">
 		<div class="col-md-4">
 		</div>
+
 		<div class="col-md-4">
 			<h4 style="color: #1a237e"><i>Edit data Siswa</i></h4><br>
-			<form>
-					<div class="form-group form-group-default">
-						<tr><td><label for="nomor_pegawai">Nomor</label></td>
-						<td><input type="text" style="height: 30px; width: 100px;" class="form-control" id="nomor_pegawai"></td></tr>
+				<?php 
+					$id = $_GET['edit_id'];
+					$query_mysql = mysql_query("SELECT * FROM siswa WHERE id='$id'")or die(mysql_error());
+					while($data = mysql_fetch_array($query_mysql)){
+				?>
+		
+
+			<form action="update.php" method="post">
+				<div class="form-group form-group-default">
+					<div class="form-group">
+						<label>ID</label>
+						<input type="text" style="height: 30px; width: 200px;" class="form-control"  name="id" value="<?php echo $data['id'] ?>">
 					</div>
 					<div class="form-group">
-						<label for="nama_pegawai">Nama</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="nama_pegawai">
+						<label>Nama</label>
+						<input type="text" style="height: 30px; width: 200px;" class="form-control" name="nama" value="<?php echo $data['nama'] ?>">
 					</div>
 					<div class="form-group">
-						<label for="jenis_kelamin">NIM</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="jenis_kelamin">
+						<label>NIM</label>
+						<input type="text" style="height: 30px; width: 200px;" class="form-control" name="nim"  value="<?php echo $data['nim'] ?>">
 					</div>
 					<div class="form-group">
-					<label for="alamat">Alamat</label>            
-	    			<textarea class="form-control" style=" width: 200px;" id="alamat" name="textarea"></textarea>
-	    			</div>
-					<button type="submit" style="color: #000000" class="btn btn-info ">Update</button>
+						<label>Alamat</label>            
+			    		<textarea class="form-control" style=" width: 200px; "  name="alamat" > <?php echo $data['alamat'] ?></textarea>
+		    		</div>
+						<button type="submit" style="color: #000000" class="btn btn-info ">Update</button>
+					</div>
 			</form>
+			<?php } ?>
+			
 		</div>
 		<div class="col-md-4">
+		
 		</div>
 	</div>
 </div>
