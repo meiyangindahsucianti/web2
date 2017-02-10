@@ -1,7 +1,7 @@
 <?php
 include 'koneksi.php';
 	if(isset($_GET['delete_id']))
-		$sql_query ="DELETE FROM siswa WHERE no=".$_GET['delete_id'];
+		$sql_query ="DELETE FROM siswa WHERE id=".$_GET['delete_id'];
 		mysql_query($sql_query);
 		header("location : $_SERVER [PHP_SELF]");
 
