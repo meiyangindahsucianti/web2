@@ -100,8 +100,8 @@ include 'koneksi.php';
 						<input type="password" style="height: 30px; width: 200px;" class="form-control" name="password">
 						<br>
 					<div class="form-group">
-						<button type="submit" style="color: #000000" class="btn btn-info " name="batal" value="Batal">Batal</button>
 						<button type="submit" style="color: #000000" class="btn btn-info " name="login" value="Login">Login</button>
+						<button type="submit" style="color: #000000" class="btn btn-danger" name="batal" value="Batal">Batal</button>
 					</div>
 			</form>
 		</div>
