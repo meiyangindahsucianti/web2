@@ -1,7 +1,8 @@
 <?php
 include 'koneksi.php';
 	if(isset($_GET['delete_id']))
-		$sql_query ="DELETE FROM siswa WHERE id=".$_GET['delete_id'];
+		$d=$_GET['delete_id'];
+		$sql_query ="DELETE FROM siswa WHERE id=$d ";
 		mysql_query($sql_query);
 		header("location : $_SERVER [PHP_SELF]");
 
@@ -80,11 +81,27 @@ include 'koneksi.php';
 	</div>
 </div>
 
-<!--  bagian button   -->
+
+<!--  bagian edit dan session logout  -->
 <div class="container" style="background-color: #b9f6ca">
 	<div class="row" style="height: 486px">
 		<div class="col-md-12">
-			<br><br><br><br>
+			<?php 
+				 session_start();
+				 	if (empty($_SESSION['username'])) {
+				 		header("location:index.php"); 
+				 		}
+				 		else {
+				 		?>
+					 	<h6 style="text-align: right" >
+					 		<?php echo $_SESSION['username'] ?>
+					 		<small style="color: #039be5"><i>Berhasil Masuk</i></small><br />
+					 		<a href="logout.php">Logout</a></h6> 
+					 	<?php 
+					 	} 
+				 	?>
+
+			<br><br>
 			  <h2>Data siswa</h2>        
 			  <table class="table table-bordered" >
 			    <thead>

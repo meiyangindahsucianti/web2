@@ -41,14 +41,18 @@
 <!--  bagian button   -->
 <div class="container" style="background-color: #b9f6ca">
 	<div class="row" style="height: 486px">
-		<div class="col-md-4">
+		<div class="col-md-2">
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-8">
 			<br><br><br><br><br><br><br><br>
-			<h1>Terimakasih telah berkunjung !!!   heeeu...</h1>
+			<h1 style="text-align: center; color: #e65100" >Terimakasih telah berkunjung !!! <br>   <small style="color: #4a148c"> in web created by wahyudin</small></h1>
+			<br><br><br>
+
+			<center><a href="index.php"><button style="color: #000000" class="btn btn-info "> Masuk </button></a></center>
 		</div>
-		<div class="col-md-4">
+		
+		<div class="col-md-2">
 		</div>
 	</div>
 </div>

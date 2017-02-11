@@ -11,7 +11,7 @@ include 'koneksi.php';
 		if (mysql_query($sql_query)) {
 			$num_row=mysql_num_rows(mysql_query($sql_query));
 			if ($num_row ==1) {
-				$SESSION ['username']=$username;
+				$_SESSION ['username']=$username;
 				?>
 				<script type="text/javascript">
 					alert('anda berhasil login');
