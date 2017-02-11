@@ -1,8 +1,7 @@
 <?php
 include 'koneksi.php';
 	if(isset($_GET['delete_id']))
-		$d=$_GET['delete_id'];
-		$sql_query ="DELETE FROM siswa WHERE id=$d ";
+		$sql_query ="DELETE FROM siswa WHERE id=".$_GET['delete_id'];
 		mysql_query($sql_query);
 		header("location : $_SERVER [PHP_SELF]");
 
@@ -30,7 +29,7 @@ include 'koneksi.php';
 	}
 	function delete_id(id){
 		if (confirm('serius ingin di hapus euy')) {
-			window.location.href='index.php?delete_id'+id;
+			window.location.href='halaman_awal.php?delete_id='+id;
 		}
 	}
 </script>
