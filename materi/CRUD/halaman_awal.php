@@ -5,7 +5,7 @@ include 'koneksi.php';
 		$username=$_POST['username'];
 		$password= sha1($_POST['password']);
 
-		$sql_query= "select * from user where username ='$username' and password=$password'";
+		$sql_query= "SELECT * FROM `user` WHERE username ='$username' and password=$password'";
 
 		if (mysql_query($sql_query)) {
 			$num_row=mysql_num_rows(mysql_query($sql_query));
@@ -38,16 +38,6 @@ include 'koneksi.php';
 		}
 ?>
 
-
-<?php
-include 'koneksi.php';
-	if(isset($_GET['delete_id']))
-		$sql_query ="DELETE FROM siswa WHERE id=".$_GET['delete_id'];
-		mysql_query($sql_query);
-		header("location : $_SERVER [PHP_SELF]");
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,18 +52,7 @@ include 'koneksi.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript">
-	function edit_id(id){
-		if (confirm('serius ingin di modif bro')){
-			window.location.href ='edit.php?edit_id='+id;
-		}
-	}
-	function delete_id(id){
-		if (confirm('serius ingin di hapus euy')) {
-			window.location.href='index.php?delete_id'+id;
-		}
-	}
-</script>
+
 </head>
 
 <body style="background-color: #eeeeee">
@@ -99,52 +78,34 @@ include 'koneksi.php';
 	</div>
 </div>
 
-<!--  bagian Header menuu   -->
-<div class="container " style="background-color: #000000">
-	<div class="row" style="font-size: 20px">
-		<div class="col-md-12">
-				<ul class="nav navbar-default" style="color: #1a237e">
-					<li class="active" style="background-color: #b9f6ca">
-						<a href="index.php">&nbsp;Beranda&nbsp;</a>
-					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<li>
-						<a href="tambah.php">&nbsp;menu 1&nbsp;</a>
-					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<li class="disabled">
-						<a href="#">&nbsp;menu 2&nbsp;</a>
-					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<li class="disabled">
-						<a href="#">&nbsp;menu 3&nbsp;</a>
-					</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</ul>
-		</div>
-	</div>
-</div>
-
 <!--  bagian button   -->
 <div class="container" style="background-color: #b9f6ca">
 	<div class="row" style="height: 486px">
-		<div class="col-md-12">
+		<div class="col-md-4">
+		</div>
+
+		<div class="col-md-4">
 			<br><br><br><br>
-			  <h2>Login</h2>        
+			  <h2>Login</h2>    
+			  <br>
+			  <br>    
 			<form method="post">
-				<table width="60%" align="center">
-					<tr>
-						<th align="center" colspan="2"> <a href="daftar.php"> <button class="button"> daftar </button></a></th>
-					</tr>
-					<tr>
-						<td>username</td>
-						<td><input type="text" name="username" size="80"></td>
-					</tr>
-					<tr>
-						<td>password</td>
-						<td><input type="password" name="password" size="80"></td>
-					</tr>
-					<tr>
-						<td colspan="2" align="right"><input type="submit" name="login" value="login"><input type="submit" name="batal" value="batal"></td>
-					</tr>
-				</table>
-			</form>	  
+				<div class="form-group form-group-default">
+					<div class="form-group">
+						<label>username</label>
+						<input type="text" style="height: 30px; width: 200px;" class="form-control" name="username" >
+					</div>
+					<div class="form-group">
+						<label>password</label>
+						<input type="password" style="height: 30px; width: 200px;" class="form-control" name="password">
+						<br>
+					<div class="form-group">
+						<button type="submit" style="color: #000000" class="btn btn-info " name="batal" value="Batal">Batal</button>
+						<button type="submit" style="color: #000000" class="btn btn-info " name="login" value="Login">Login</button>
+					</div>
+			</form>
+		</div>
+		<div class="col-md-4">
 		</div>
 	</div>
 </div>
