@@ -71,22 +71,19 @@
 		</div>
 		<div class="col-md-4">
 			<h4 style="color: #1a237e"><i>Tambah data Siswa</i></h4><br>
-			<form>
-					<div class="form-group form-group-default">
-						<tr><td><label for="nomor_pegawai">Nomor</label></td>
-						<td><input type="text" style="height: 30px; width: 100px;" class="form-control" id="nomor_pegawai"></td></tr>
+			<form action="tambah_proses.php" method="post">
+					
+					<div class="form-group">
+						<label>Nama</label>
+						<input maxlength="10" type="text" style="height: 30px; width: 200px;" class="form-control" name="nama">
 					</div>
 					<div class="form-group">
-						<label for="nama_pegawai">Nama</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="nama_pegawai">
+						<label>NIM</label>
+						<input maxlength="10" type="text" style="height: 30px; width: 200px;" class="form-control" name="nim">
 					</div>
 					<div class="form-group">
-						<label for="jenis_kelamin">NIM</label>
-						<input type="text" style="height: 30px; width: 200px;" class="form-control" id="jenis_kelamin">
-					</div>
-					<div class="form-group">
-					<label for="alamat">Alamat</label>            
-	    			<textarea class="form-control" style=" width: 200px;" id="alamat" name="textarea"></textarea>
+					<label>Alamat</label>            
+	    			<textarea class="form-control" style=" width: 200px;" id="alamat" name="alamat"></textarea>
 	    			</div>
 					<button type="submit" style="color: #000000" class="btn btn-info ">Simpan</button>
 			</form>
